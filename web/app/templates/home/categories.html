@@ -1,0 +1,8 @@
+<script type="text/x-jquery-tmpl" id="homeCategoriesTmpl">
+<h2>博文分类</h2>
+<ul>
+	{{each(i, result) categories}}
+	<li><a href="/home/${result.categoryId}">${result.categoryName}</a></li>
+	{{/each}}		
+</ul>
+</script>							

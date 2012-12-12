@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang='zh'>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Blog Geek">
+		<meta name="description" content="Blog Geek">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=980, initial-scale=1 user-scalable=no">
+		
+		<!-- Debug -->
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+		
+		<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+		<title>Blog Geek</title>
+
+		<!--[if lte IE 8]>
+		<script type="text/javascript">
+			document.location.replace('/not-supported.html');
+		</script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="/assets/css/base.css">		
+	</head>
+	<body>
+		<section id="wrap">
+			<header id="main-header" style="display: none;">
+				<section class="container clearfix">
+					<a id="logo" href="/home">Blogger</a>
+					<img id="loading" src="/assets/img/ajax-loader-header.gif" style="display: none;">
+					<nav id="nav">
+						<ul class="nav-links">
+							<li class="home"><a href="/">首页</a></li>
+							<li class="about"><a href="/about">关于</a></li>
+							<li class="login"><a href="/login">登录</a></li>
+							<li class="control">
+								<a href="/control">控制台</a>
+								<ul class="subnav">
+									<li><a href="/control/blogs" class="blogs">博文管理</a></li>
+									<li><a href="/control/comments" class="comments">评论管理</a></li>
+									<li><a href="/control/settings" class="settings">设置</a></li>
+									<li><a href="/logout" class="logout">注销账号</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</section>
+			</header>
+			<section id="main-content">
+				<section id="mainBody">
+					<div id="loader">
+						<img id="loader-img" src="/assets/img/main-loader.gif"/>
+					</div>													
+				</section>
+				<div class="push"></div>
+				<!-- End section#mainBody -->					
+			</section>
+		</section>
+		<footer id="main-footer" style="display: none;">
+			<section class="container">
+				<section class="row">
+					<section class="copyright">
+						&copy; 2012 blogger,inc. all rights reserved. <br/>
+						<a href="http://www.qusi.com/" target="_blank">沪ICP备12050014</a>
+					</section>
+				</section>
+			</section>
+		</footer>
+		<section id="growl">
+			<section class="growl error clearfix">
+				<span class="arrowz"></span>
+				<strong></strong>
+			</section>
+			<section class="growl warning clearfix">
+				<span class="arrowz"></span>
+				<strong></strong>
+			</section>
+			<section class="growl success clearfix">
+				<span class="arrowz"></span>
+				<strong></strong>
+			</section>
+		</section>
+		<script data-main="/app/config" src="/assets/js/libs/require.js?1346221223"></script>
+	</body>
+</html>

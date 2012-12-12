@@ -1,0 +1,34 @@
+<script type="text/x-jquery-tmpl" id="homeBlogsTmpl">	
+	{{each(i, result) blogs}}
+		{{if i >= startIndex && i < (startIndex + pagesize)}}
+			<section class="blog">
+				<header class="title"><h2><a href="/blog/${result.blogId}">${result.title}</a></h2></header>
+				<section class="content">
+					{{html result.content}}
+				</section>
+				<footer class="clearfix">
+					<section class="span10">${result.name} ${result.timer}发表在 <a href="/home/${result.categoryId}">${result.categoryName}</a></section>
+					<section class="span2"><a value="${result.blogId}" data-bypass="data-bypass" class="comments"><em class="commentsCount">${result.comments}</em>条评论</a></section>
+				</footer>
+			</section>	
+		{{/if}}
+	{{/each}}							
+	
+	{{if blogs.length > pagesize}}
+		<footer class="page-content-footer">
+			<section id="pagination">
+				{{if startIndex > 0}}
+					<a href="/home/${categoryId}/${startIndex - pagesize}" id="prev"><div class="arrow"><img src="/assets/img/less/icon_prevarrow.png" /></div> 上一页</a>
+				{{/if}}
+							
+				<span>第 ${(startIndex / pagesize) + 1} / ${Math.ceil(blogs.length/pagesize)} 页</span>
+						
+				{{if startIndex + pagesize < blogs.length}}
+					<a href="/home/${categoryId}/${startIndex + pagesize}" id="next">下一页 <div class="arrow"><img src="/assets/img/less/icon_nextarrow.png" /></div></a>
+				{{/if}}
+			</section>
+			<!--End section#pagination-->
+		</footer>
+	{{/if}}
+	
+</script>								

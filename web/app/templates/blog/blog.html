@@ -1,0 +1,17 @@
+<script type="text/x-jquery-tmpl" id="blogMainTmpl">	
+<section class="row">
+	<section id="mainContent" class="span12">
+		<section class="blog">
+			<header class="title"><h2>${title}</h2></header>
+			<section class="content">				
+				{{html content}}
+			</section>
+			<footer class="clearfix">
+				<section class="span10">${name} ${timer}发表在 <a href="/home/${categoryId}">${categoryName}</a></section>
+				<section class="span2"><a value="${blogId}" data-bypass="data-bypass" class="comments"><em class="commentsCount">${comments.length}</em>条评论</a></section>
+			</footer>			
+		</section>
+	</section>
+	<section id="mainSidebar" class="span4"></section>
+</section>	
+</script>

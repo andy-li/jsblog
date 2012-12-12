@@ -1,0 +1,32 @@
+<script type="text/x-jquery-tmpl" id="commentsTmpl">
+	<section class="arrowt">
+		<em class="W_arrline">◆</em>
+		<span>◆</span>
+	</section>	
+	<form class="add-comment-form">
+		<div class="clearfix">
+			<label for="nickname">昵称：</label>
+			<input type="text" id="nickname" name="nickname" value="">	
+		</div>
+		<div class="clearfix">
+			<label for="content">内容：</label>
+			<textarea id="content" name="content"></textarea>
+		</div>
+		<div class="clearfix">
+			<button type="submit" class="btn blue-b">写好了</button>
+		</div>
+	</form>
+	<ul class="comment-list">
+		
+		{{each(i, result) allComments[blogId]}}
+		<li><span class="list-nickname">${result.nickname} , ${result.timer}：</span><span class="list-content">${result.content}</span></li>
+		{{/each}}		
+		
+		{{if allComments[blogId].length == 0}}
+		<li class="empty"><strong>还没有人评论，还不赶快抢沙发？</strong></li>
+		{{/if}}
+	</ul>
+</script>
+<script type="text/x-jquery-tmpl" id="addCommentTmpl">
+	<li><span class="list-nickname">${add.nickname} , ${add.timer}：</span><span class="list-content">${add.content}</span></li>
+</script>
